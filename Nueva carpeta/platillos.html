@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Recetas de Cocina Mexicana</title>
+<link rel="stylesheet" type="text/css" href="estilos.css" media="screen" />
+
+<style>
+    body {
+        background-image: url('fondo1.jpeg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
+
+<style>
+    .image-container {
+        display: flex;
+        flex-wrap: wrap; /* Para que los platillos se distribuyan en varias filas si es necesario */
+        justify-content: center; /* Para centrar los platillos horizontalmente */
+        margin-top: 20px; /* Añadir espacio arriba de los platillos */
+    }
+
+    .image-container img {
+        transition: transform 0.3s;
+        border: 1px solid black;
+        border-radius: 10px;
+    }
+
+    .image-container img:hover {
+        transform: scale(1.2);
+    }
+
+    /* Estilo para los títulos de los platillos */
+    .image-container figcaption {
+        font-size: 20px; /* Tamaño de letra más grande */
+        background-color: white; /* Fondo blanco */
+        padding: 10px; /* Espacio alrededor del texto */
+        border-radius: 5px; /* Borde redondeado */
+    }
+</style>
+
+</head>
+<form action="insertar3.asp" method="post">
+<body bgcolor="beige">
+<button onclick="goBack()">Regresar</button>
+<script>
+function goBack(){
+history.back();
+}
+</script>
+
+<marquee><h1 style="background-color: red; color: white;">Bienvenido a la Cocina Mexicana</h1></marquee>
+
+<form action="insertar3.asp" method="post">
+    <label for="cantidad_label">Cantidad:</label>
+    <input class="input" id="Cantidad" name="Cantidad" type="text" required style="width: 100px;">
+    <input type="submit">
+
+    <div class="image-container">
+        <!-- Platillos existentes -->
+        <figure>
+            <img src="tacos1.jpeg" alt="Tacos" width="300" height="300">
+            <figcaption><input type="checkbox" id="tacos" name="tacos" value=1> Tacos al pastor - $10.00</figcaption>
+        </figure>
+        <figure>
+            <img src="guacamole2.jpeg" alt="Guacamole" width="300" height="300">
+            <figcaption><input type="checkbox" id="guacamole" name="guacamole" value=1> Guacamole - $8.00</figcaption>
+        </figure>
+        <figure>
+            <img src="molepoblano3.jpeg" alt="Mole" width="300" height="300">
+            <figcaption><input type="checkbox" id="mole" name="mole" value=1> Mole Poblano - $12.00</figcaption>
+        </figure>
+        <figure>
+            <img src="enchiladas.jpeg" alt="Enchiladas" width="300" height="300">
+            <figcaption><input type="checkbox" id="enchiladas" name="enchiladas" value=1> Enchiladas - $9.00</figcaption>
+        </figure>
+        <figure>
+            <img src="chilesrellenos.jpeg" alt="Chiles Rellenos" width="300" height="300">
+            <figcaption><input type="checkbox" id="chiles_rellenos" name="chiles_rellenos" value=1> Chiles Rellenos - $11.00</figcaption>
+        </figure>
+        <!-- Nuevos platillos -->
+        <figure>
+            <img src="pozole.jpeg" alt="pozole" width="300" height="300">
+            <figcaption><input type="checkbox" id="pozole" name="pozole" value=1> pozole - $30.00</figcaption>
+        </figure>
+        <figure>
+            <img src="tamales.jpeg" alt="tamales" width="300" height="300">
+            <figcaption><input type="checkbox" id="tamales" name="tamales" value=1> tamales- $35.00</figcaption>
+        </figure>
+         <figure>
+            <img src="chilaquiles.jpeg" alt="chilaquiles" width="300" height="300">
+            <figcaption><input type="checkbox" id="chilaquiles" name="chilaquiles" value=1> chilaquiles - $30.00</figcaption>
+        </figure>
+        <figure>
+            <img src="tostadas.jpeg" alt="tostadas" width="300" height="300">
+            <figcaption><input type="checkbox" id="tostadas" name="tostadas" value=1> tostadas- $40</figcaption>
+        </figure>
+        <figure>
+            <img src="sopes.jpeg" alt="sopes" width="300" height="300">
+            <figcaption><input type="checkbox" id="sopes" name="sopes" value=1> sopes- $60</figcaption>
+        </figure>
+   <figure>
+
+            <img src="birria.jpg" alt="birria" width="300" height="300">
+            <figcaption><input type="checkbox" id="birria" name="birria" value=1> birria - $70</figcaption>
+        </figure>
+
+    </div>
+</form>
+
+<button onclick="goBack()">Regresar</button>
+
+<form action="recuperar.asp" method="post">
+    <input type="submit" value="Recuperar">
+</form>
+
+</body>
+</html>

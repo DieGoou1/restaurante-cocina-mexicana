@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Ejemplo de estilos CSS en un archivo externo</title>
+<link rel="stylesheet" type="text/css" href="formulario.css" media="screen" />
+</head>
+<body>
+<button onclick="goBack()">Regresar</button>
+<script>
+function goBack(){
+history.back();
+}
+</script>
+<form action="insertar2.asp" method="post">
+    <fieldset>
+         <h2>Rellenar formulario completo:</h2>
+         <ul>
+              <li>
+                   <label id="nombre" for="nombre">NOMBRE:</label>
+                   <input class="input" id="nombre" name="nombre" type="text"required width="300px">
+             </li>
+             <li>
+                   <label id="primer_apellido" for="primer_apellido">PRIMER_APELLIDO:</label>
+                   <input class="input" id="primer_apellido" name="primer_apellido" type="text"required width="300px">
+             </li>
+             <li>
+                   <label id="segundo_apellido" for="segundo_apellido">SEGUNDO_APELLIDO:</label>
+                   <input class="input" id="segundo_apellido"  name="segundo_apellido"type="text" required width="300px">
+             </li>
+             <li>
+                   <label id="email" for="mail">E-MAIL DE CONTACTO:</label>
+                   <input class="input" id="correo" type="text" name="CORREO" placeholder="xxx@gmail.com" required 
+                   pattern="^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$">
+             </li>
+             <li>
+
+            <li>
+                  <div class="checkbox">
+                       <input id="check" type="checkbox" required >
+                       <a href="#">He leido y acepto la politica de privacidad</a>
+                  </div>
+            </li>
+            <li>
+                  <label for="contactar"></label>
+                  <button style="background-color: rgb(0, 225, 255) ;" type="submit">CONTACTAR</button>
+            </li>
+            <li>
+                  <label for="reset"></label>
+                  <button style="background-color: rgb(255, 0, 76) ;" type="submit">Reiniciar</button>
+            </li>
+      </ul>
+   </fieldset>
+</form>
+<script src="validacion_formulario.js"></script>
+</body>
+</html>

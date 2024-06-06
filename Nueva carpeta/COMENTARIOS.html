@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Ejemplo de estilos CSS en un archivo externo</title>
+<link rel="stylesheet" type="text/css" href="formulario.css" media="screen" />
+</head>
+<body>
+<button onclick="goBack()">Regresar</button>
+<script>
+function goBack(){
+history.back();
+}
+</script>
+
+<form action="insertar.asp" method="post">
+<fieldset>
+         <h2>Rellenar formulario completo:</h2>
+         <ul>
+              <li>
+                   <label id="usuario" for="usuario">Nombre:</label>
+                   <input class="input" id="usuario" name="USUARIO" type="text"required width="300px">
+             </li>
+                        <li>
+                   <label id="correo" for="correo">E-mail de contacto:</label>
+                   <input class="input" id="correo" type="text" name="CORREO" placeholder="xxx@gmail.com" required 
+                   pattern="^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$">
+             </li>
+             <li>
+                   <label id="coments" for="coments">Mensaje:<span>*describe tu consulta</span></label>
+                   <textarea class="input" id="coments" name="COMENTS" cols="30" rows="10" placeholder="Escribe tu mensaje..."></textarea>
+            </li>
+                       <li>
+                  <label for="ENVIAR"></label>
+                  <button style="background-color: rgb(0, 225, 255) ;" type="submit">ENVIAR</button>
+            </li>
+            <li>
+                  <label for="BORRAR"></label>
+                  <button style="background-color: rgb(255, 0, 76) ;" type="submit">BORRAR</button>
+            </li>
+      </ul>
+   </fieldset>
+</form>
+<script src="validacion_formulario.js"></script>
+</body>
+</html>

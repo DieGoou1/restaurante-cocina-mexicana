@@ -1,0 +1,14 @@
+
+
+h1{font-family:tahoma; font-size:3; color:purple;}
+h2{font-family:helvetica; font-size:1;color:purple;}
+p{ color:#000080; font-family: arial; font size:5cm; font-weight:bolder}
+button{ background-color:yellow; border-radius: 10px;}
+.image-container {
+    display: flex;
+  }
+
+  .image-container img {
+    border: 1px solid black;
+    border-radius: 10px;
+  }

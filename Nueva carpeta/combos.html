@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Combos Mexa</title>
+<link rel="stylesheet" type="text/css" href="estilos.css" media="screen" />
+
+<style>
+    body {
+        background-image: url('fondo1.jpeg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 20px; 
+    }
+
+    h1 {
+        margin: 20px;
+        color: white; 
+        background-color: red; 
+        padding: 10px; 
+        display: inline-block; 
+    }
+</style>
+
+<style>
+  .image-container {
+    display: flex;
+  }
+
+  .image-container img {
+    transition: transform 0.3s;
+    border: 1px solid black; 
+    border-radius: 10px; 
+  }
+
+  .image-container img:hover {
+    transform: scale(1.2);
+  }
+</style>
+</head>
+<form action="insertar3.asp" method="post">
+
+<body bgcolor="beige">
+<button onclick="goBack()">Regresar</button>
+<script>
+function goBack(){
+history.back();
+}
+</script>
+
+<marquee><h1>Combos Mexas</h1></marquee>
+
+<form action="insertar3.asp" method="post">
+    <label for="cantidad_label">Cantidad:</label>
+    <input class="input" id="Cantidad" name="Cantidad" type="text" required style="width: 100px;">
+    <input type="submit">
+
+<div class="image-container">
+    <figure>
+        <img src="combo 1.jpg" alt="imagen 1" width="300" height="300">
+        <figcaption>
+            <input type="checkbox" id="mql1" name="mql1" value=1>
+            Comprar<br>
+            tacos entre cuates<br>
+            $220.00
+        </figcaption>
+    </figure>
+    <figure>
+        <img src="combo 2.jpg" alt="imagen 2" width="300" height="300">
+        <figcaption>
+            <input type="checkbox" id="mql2" name="mql2" value=1>
+            Comprar<br>
+            nachos en pareja<br>
+            $180.00
+        </figcaption>
+    </figure>
+    <figure>
+        <img src="combo 3.jpg" alt="imagen 3" width="300" height="300">
+        <figcaption>
+            <input type="checkbox" id="mql3" name="mql3" value=1>
+            Comprar<br>
+            Cena en familia <br>
+            $522.00
+        </figcaption>
+    </figure>
+    <figure>
+        <img src="combo 4.jpg" alt="imagen 4" width="300" height="300">
+        <figcaption>
+            <input type="checkbox" id="mql4" name="mql4" value=1>
+            Comprar<br>
+            taquitos y papitas<br>
+            $350.00
+        </figcaption>
+    </figure>
+    <figure>
+        <img src="combo 5.jpg" alt="imagen 5" width="300" height="300">
+        <figcaption>
+            <input type="checkbox" id="mql5" name="mql5" value=1>
+            Comprar<br>
+            elotes pa todos <br>
+            $160.00
+        </figcaption>
+    </figure>
+</div>
+
+<button onclick="goBack()">Regresar</button>
+
+<form action="recuperar.asp" method="post">
+    <input type="submit" value="Recuperar">
+</form>
+
+</body>
+</html>
